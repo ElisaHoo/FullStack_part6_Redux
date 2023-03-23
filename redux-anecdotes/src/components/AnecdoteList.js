@@ -2,9 +2,13 @@ import { useSelector, useDispatch } from 'react-redux'
 import { addVote } from '../reducers/anecdoteReducer'
 
 const AnecdoteList = (props) => {
-    const anecdotes = useSelector(state => state)
     const dispatch = useDispatch()
-
+    const anecdotes = useSelector(state => {
+        if (state.filter === 'ALL') {
+            return state.anecdote
+        }
+        return state.anecdote.filter(a => a.content.toLowerCase().includes(state.filter.toLowerCase()))
+    })
     const vote = (id) => {
         dispatch(addVote(id))  // dispatching action type to reducer
     }
