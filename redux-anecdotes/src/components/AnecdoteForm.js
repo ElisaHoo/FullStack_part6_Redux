@@ -9,7 +9,7 @@ const NewAnecdote = (props) => {
         event.preventDefault()
         const content = event.target.newAnec.value  // referred to input-fields name
         event.target.newAnec.value = ''
-        dispatch(createAnecdote(content)) 
+        dispatch(createAnecdote(content))
     }
 
     return (
