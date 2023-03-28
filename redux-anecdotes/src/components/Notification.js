@@ -9,7 +9,7 @@ const Notification = () => {
     padding: 10,
     borderWidth: 1
   }
-  console.log('notification :>> ', notification);
+  
   if (notification === '') {
     return <div></div>
   } else {
