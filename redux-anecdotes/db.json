@@ -3,7 +3,7 @@
     {
       "content": "If it hurts, do it more often",
       "id": "47145",
-      "votes": 0
+      "votes": 1
     },
     {
       "content": "Adding manpower to a late software project makes it later!",
@@ -28,17 +28,27 @@
     {
       "content": "Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.",
       "id": "98312",
-      "votes": 0
+      "votes": 4
     },
     {
       "content": " Anekdootti tai kuulopuhe, josta ei varmuudella tiedetä, onko se totta.",
-      "votes": 0,
+      "votes": 3,
       "id": "H49at2a"
     },
     {
       "content": "Todiste, joka on itsessään kelvollinen mutta jota käytetään \"todistamaan\" liian yleistä väitettä - sellaista, jonka todistaminen vaatisi huomattavasti laajempaa todistusaineistoa.",
-      "votes": 0,
+      "votes": 1,
       "id": "hms7WfX"
+    },
+    {
+      "content": "abc",
+      "votes": 2,
+      "id": "MC9iJxQ"
+    },
+    {
+      "content": "testi",
+      "votes": 0,
+      "id": "-oxFfxl"
     }
   ]
 }
