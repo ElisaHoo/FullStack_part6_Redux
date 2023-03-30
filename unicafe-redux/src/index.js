@@ -2,7 +2,6 @@ import React from "react"
 import counterReducer from "./reducer"
 import ReactDOM from 'react-dom/client'
 import { createStore } from "redux"
-import { render } from "@testing-library/react"
 
 const store = createStore(counterReducer)
 
