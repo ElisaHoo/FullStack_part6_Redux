@@ -19,7 +19,6 @@ const App = () => {
   const handleVote = (anecdote) => {
     voteAnecdoteMutation.mutate({ ...anecdote, votes: anecdote.votes + 1 })
     dispatch({ type: "SHOW", payload: `You voted '${anecdote.content}'` })
-    setTimeout(() => dispatch({ type: "HIDE"}), 5000)
   }
 
   const result = useQuery('anecdotes', getAnecdotes, { retry: 1 })

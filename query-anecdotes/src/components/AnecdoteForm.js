@@ -10,6 +10,9 @@ const AnecdoteForm = () => {
     onSuccess: () => {  // when mutation is done successfully, React Query updates query named 'anecdotes' and gets anecdotes from server
       queryClient.invalidateQueries('anecdotes')
     },
+    onError: () => {
+      dispatch({ type: "SHOW", payload: 'Too short anecdote, must have length 5 or more' })
+    }
   })
 
   const onCreate = (event) => {
@@ -18,7 +21,6 @@ const AnecdoteForm = () => {
     event.target.anecdote.value = ''
     newAnecMutation.mutate({ content, votes: 0 })
     dispatch({ type: "SHOW", payload: `You added ${content}` })
-    setTimeout(() => dispatch({ type: "HIDE" }), 5000)
 }
 
   return (

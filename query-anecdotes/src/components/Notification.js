@@ -1,8 +1,8 @@
-import { useNotificationValue } from "../NotificationContext"
+import { useNotificationValue, useNotificationDispatch } from "../NotificationContext"
 
 const Notification = () => {  
   const notifValue = useNotificationValue()
-  console.log('notifvalue :>> ', notifValue);
+  const dispatch = useNotificationDispatch()
 
   const style = {
     border: 'solid',
@@ -11,15 +11,17 @@ const Notification = () => {
     marginBottom: 5
   }
   
-  if (typeof notifValue === "string") {
-    return (
-      <div style={style}>
-        {notifValue}
-      </div>
-    )
+  if (typeof notifValue !== "string") {
+    return null
+  } else {
+    setTimeout(() => dispatch({ type: "HIDE" }), 5000)
   }
 
-  return null
+  return (
+    <div style={style}>
+      {notifValue}
+    </div>
+  )
 
 }
 
